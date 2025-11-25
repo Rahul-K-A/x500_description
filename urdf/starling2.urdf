@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="starling2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000149374353086822 1.97259826530437E-05 0.0080312652423187"
+        rpy="0 0 0" />
+      <mass
+        value="0.0654572412672586" />
+      <inertia
+        ixx="0.0216666666666666"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="0.02166666666666667"
+        iyz="1e-9"
+        izz="0.04000000000000001" />
+      </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fl_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.00264955845969433 -0.00523753503392298 -0.0233308820202257"
+        rpy="0 0 0" />
+      <mass
+        value="0.00507585684308429" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fl_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fl_foot_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="fl_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.0949999999999995 0.13 -0.00250000000000033"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fl_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fl_motor_link">
+    <inertial>
+      <origin
+        xyz="7.13244564104487E-08 -2.12782971659164E-07 0.00923828850084918"
+        rpy="0 0 0" />
+      <mass
+        value="0.0197" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fl_motor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+        <geometry>
+            <cylinder radius="0.04" length="0.145"/>
+        </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fl_motor_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.00750000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="fl_foot_link" />
+    <child
+      link="fl_motor_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fl_rotor_link">
+    <inertial>
+      <origin
+        xyz="-3.32717593277965E-06 9.14219090292212E-07 0.0041505334731533"
+        rpy="0 0 0" />
+      <mass
+        value="0.00775420714403987" />
+      <inertia
+        ixx="3.8464910483993325e-07"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="2.6115851691700804e-05"
+        iyz="1e-9"
+        izz="2.649858234714004e-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fl_rotor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fl_rotor_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="fl_rotor_joint" type="revolute">
+    <origin
+      xyz="0 0 0.0145"
+      rpy="0 0 0" />
+    <parent
+      link="fl_motor_link" />
+    <child
+      link="fl_rotor_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1e+16" upper="1e+16" effort="1000" velocity="1000"/>
+
+  </joint>
+  <link
+    name="fl_rotor_nut_link">
+    <inertial>
+      <origin
+        xyz="-3.60788637160381E-08 6.08339327579088E-07 -0.00490418266988037"
+        rpy="0 0 0" />
+      <mass
+        value="0.000288814916439492" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fl_rotor_nut_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fl_rotor_nut_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="fl_rotor_nut_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0296"
+      rpy="0 0 0" />
+    <parent
+      link="fl_motor_link" />
+    <child
+      link="fl_rotor_nut_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fr_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.00273643316219788 0.00542897719182416 -0.0242461349552204"
+        rpy="0 0 0" />
+      <mass
+        value="0.00490045874350842" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fr_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fr_foot_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="fr_foot_joint"
+    type="fixed">
+    <origin
+      xyz="0.095 -0.13 -0.0025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="fr_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fr_motor_link">
+    <inertial>
+      <origin
+        xyz="2.13573664281652E-07 -6.89206864079583E-08 0.00923828850084922"
+        rpy="0 0 0" />
+      <mass
+        value="0.0197" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fr_motor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+        <geometry>
+            <cylinder radius="0.04" length="0.143"/>
+        </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fr_motor_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.00750000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="fr_foot_link" />
+    <child
+      link="fr_motor_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fr_rotor_link">
+    <inertial>
+      <origin
+        xyz="-1.34638191580383E-06 -7.75562652099993E-07 0.00414324904903203"
+        rpy="0 0 0" />
+      <mass
+        value="0.00811819594401099" />
+      <inertia
+        ixx="3.8464910483993325e-07"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="2.6115851691700804e-05"
+        iyz="1e-9"
+        izz="2.649858234714004e-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fr_rotor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fr_rotor_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="fr_rotor_joint" type="revolute">
+    <origin
+      xyz="0 0 0.0145"
+      rpy="0 0 0" />
+    <parent
+      link="fr_motor_link" />
+    <child
+      link="fr_rotor_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1e+16" upper="1e+16" effort="1000" velocity="1000"/>
+  </joint>
+  <link
+    name="fr_rotor_nut_link">
+    <inertial>
+      <origin
+        xyz="-5.10965366046223E-07 3.32103623268409E-07 -0.00490418266988037"
+        rpy="0 0 0" />
+      <mass
+        value="0.000288814916439497" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fr_rotor_nut_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/fr_rotor_nut_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="fr_rotor_nut_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0296"
+      rpy="0 0 0" />
+    <parent
+      link="fr_motor_link" />
+    <child
+      link="fr_rotor_nut_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rl_foot_link">
+    <inertial>
+      <origin
+        xyz="0.00273643316225367 -0.00542897719171104 -0.0242461349553224"
+        rpy="0 0 0" />
+      <mass
+        value="0.00490045874346776" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rl_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rl_foot_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rl_foot_joint"
+    type="fixed">
+    <origin
+      xyz="-0.095 0.13 -0.0025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rl_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rl_motor_link">
+    <inertial>
+      <origin
+        xyz="2.13573664309408E-07 -6.89206864357139E-08 0.00923828850084919"
+        rpy="0 0 0" />
+      <mass
+        value="0.0197" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rl_motor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+        <geometry>
+            <cylinder radius="0.04" length="0.145"/>
+        </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl_motor_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.00750000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="rl_foot_link" />
+    <child
+      link="rl_motor_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rl_rotor_link">
+    <inertial>
+      <origin
+        xyz="1.35859288867557E-06 7.54884352055507E-07 0.00414324207231732"
+        rpy="0 0 0" />
+      <mass
+        value="0.00811817510442025" />
+      <inertia
+        ixx="3.8464910483993325e-07"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="2.6115851691700804e-05"
+        iyz="1e-9"
+        izz="2.649858234714004e-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rl_rotor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rl_rotor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl_rotor_joint" type="revolute">
+    <origin
+      xyz="0 0 0.0145"
+      rpy="0 0 0" />
+    <parent
+      link="rl_motor_link" />
+    <child
+      link="rl_rotor_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1e+16" upper="1e+16" effort="1000" velocity="1000"/>
+
+  </joint>
+  <link
+    name="rl_rotor_nut_link">
+    <inertial>
+      <origin
+        xyz="-5.10965366046223E-07 3.32103623240654E-07 -0.00490418266988036"
+        rpy="0 0 0" />
+      <mass
+        value="0.000288814916439496" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rl_rotor_nut_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rl_rotor_nut_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rl_rotor_nut_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0296"
+      rpy="0 0 0" />
+    <parent
+      link="rl_motor_link" />
+    <child
+      link="rl_rotor_nut_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rr_foot_link">
+    <inertial>
+      <origin
+        xyz="0.00274436315475213 0.00542492030210207 -0.024246077602557"
+        rpy="0 0 0" />
+      <mass
+        value="0.00490051911667631" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rr_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+        <geometry>
+            <cylinder radius="0.04" length="0.143"/>
+        </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr_foot_joint"
+    type="fixed">
+    <origin
+      xyz="-0.095 -0.13 -0.0025"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rr_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rr_motor_link">
+    <inertial>
+      <origin
+        xyz="-2.1278297156202E-07 -7.13244563410598E-08 0.00923828850084913"
+        rpy="0 0 0" />
+      <mass
+        value="0.0197" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rr_motor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rr_motor_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rr_motor_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.00750000000000101"
+      rpy="0 0 0" />
+    <parent
+      link="rr_foot_link" />
+    <child
+      link="rr_motor_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rr_rotor_link">
+    <inertial>
+      <origin
+        xyz="3.35333131465387E-06 -9.38958695628767E-07 0.00415051112786462"
+        rpy="0 0 0" />
+      <mass
+        value="0.00775419673991867" />
+      <inertia
+        ixx="3.8464910483993325e-07"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="2.6115851691700804e-05"
+        iyz="1e-9"
+        izz="2.649858234714004e-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rr_rotor_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rr_rotor_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rr_rotor_joint" type="revolute">
+    <origin
+      xyz="0 0 0.014499999999999"
+      rpy="0 0 0" />
+    <parent
+      link="rr_motor_link" />
+    <child
+      link="rr_rotor_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-1e+16" upper="1e+16" effort="1000" velocity="1000"/>
+
+  </joint>
+  <link
+    name="rr_rotor_nut_link">
+    <inertial>
+      <origin
+        xyz="6.08339327523577E-07 3.60788637021603E-08 -0.00490418266988037"
+        rpy="0 0 0" />
+      <mass
+        value="0.000288814916439496" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rr_rotor_nut_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rr_rotor_nut_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rr_rotor_nut_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0296"
+      rpy="0 0 0" />
+    <parent
+      link="rr_motor_link" />
+    <child
+      link="rr_rotor_nut_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_camera_mount_link">
+    <inertial>
+      <origin
+        xyz="-0.00971412984732473 -2.60008082361704E-05 0.00550777422655296"
+        rpy="0 0 0" />
+      <mass
+        value="0.00495266080842943" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/front_camera_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/front_camera_mount_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="front_camera_mount_joint"
+    type="fixed">
+    <origin
+      xyz="0.0705 0 0.005"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_camera_mount_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_tracking_camera_link">
+    <inertial>
+      <origin
+        xyz="-0.00351598648032905 4.40503812881716E-10 3.97636784610356E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.000447194061989187" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/front_tracking_camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/front_tracking_camera_link.STL" />
+      </geometry> -->
+    <!-- </collision> -->
+  </link>
+  <joint
+    name="front_tracking_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.00150000000000006 0 0.016"
+      rpy="0 0 0" />
+    <parent
+      link="front_camera_mount_link" />
+    <child
+      link="front_tracking_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_rgb_camera_link">
+    <inertial>
+      <origin
+        xyz="0.014031972183485 -6.30535266028325E-11 -3.08481972605135E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260550977052418" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/front_rgb_camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/front_rgb_camera_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="front_rgb_camera_joint"
+    type="fixed">
+    <origin
+      xyz="-0.020299999999997 0 -0.00199999999999993"
+      rpy="0 0 0" />
+    <parent
+      link="front_camera_mount_link" />
+    <child
+      link="front_rgb_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_mount_link">
+    <inertial>
+      <origin
+        xyz="-0.00745509522412555 0.00470049080450764 0.000423578781280529"
+        rpy="0 0 0" />
+      <mass
+        value="0.0071001861009109" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rear_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rear_mount_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rear_mount_joint"
+    type="fixed">
+    <origin
+      xyz="-0.057 0 -0.0072"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_mount_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gps_link">
+    <inertial>
+      <origin
+        xyz="-0.000207029687685434 0.000185045418108052 -0.00202714221224054"
+        rpy="0 0 0" />
+      <mass
+        value="0.00425580997507671" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/gps_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/gps_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="gps_joint"
+    type="fixed">
+    <origin
+      xyz="-0.027 0.0155 0"
+      rpy="-1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="rear_mount_link" />
+    <child
+      link="gps_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_tracking_camera_link">
+    <inertial>
+      <origin
+        xyz="-4.40503807042081E-10 3.97622906822548E-13 0.00351598648032932"
+        rpy="0 0 0" />
+      <mass
+        value="0.000447194061989187" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rear_tracking_camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rear_tracking_camera_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rear_tracking_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.00549999999999999 -0.013000000040705"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="rear_mount_link" />
+    <child
+      link="rear_tracking_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_rgb_camera_link">
+    <inertial>
+      <origin
+        xyz="-3.08482406286004E-13 -6.30535736470539E-11 -0.014031972183485"
+        rpy="0 0 0" />
+      <mass
+        value="0.00260550977052419" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rear_rgb_camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/rear_rgb_camera_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="rear_rgb_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0163 0.005000000004927"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="rear_mount_link" />
+    <child
+      link="rear_rgb_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="battery_left_link">
+    <inertial>
+      <origin
+        xyz="3.29583316528174E-18 0 -8.67361737988404E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.108" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/battery_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/battery_left_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="battery_left_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.041 0.0072"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="battery_left_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="battery_right_link">
+    <inertial>
+      <origin
+        xyz="-4.01253133692266E-15 -1.38777878078145E-17 -1.12757025938492E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.108" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/battery_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/battery_right_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="battery_right_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.041 0.0072"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="battery_right_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="voxl_mount_link">
+    <inertial>
+      <origin
+        xyz="0.000402319010780284 -0.000857218280271712 0.0194901304262077"
+        rpy="0 0 0" />
+      <mass
+        value="0.00853478229948794" />
+      <inertia
+        ixx="1e-9"
+        ixy="1e-9"
+        ixz="1e-9"
+        iyy="1e-9"
+        iyz="1e-9"
+        izz="1e-9" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/voxl_mount_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/voxl_mount_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="voxl_mount_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="voxl_mount_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="voxl_app_imu_link">
+    <!-- <inertial>
+      <origin
+        xyz="-0.0326121840102625 0.0146986169928462 0.000827572656319036"
+        rpy="0 0 0" />
+      <mass
+        value="0.0046352964891205" />
+      <inertia
+        ixx="2.83059654329078E-07"
+        ixy="9.74021306913149E-09"
+        ixz="-1.84670556266564E-10"
+        iyy="1.04521523955054E-06"
+        iyz="1.00336243634775E-10"
+        izz="1.32368604227628E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/voxl_app_imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/voxl_app_imu_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="voxl_app_imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.0312500000000001 -0.0154999989600039 0.0199999999999959"
+      rpy="0 0 0" />
+    <parent
+      link="voxl_mount_link" />
+    <child
+      link="voxl_app_imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="px4_onboard_imu_link">
+    <!-- <inertial>
+      <origin
+        xyz="-0.0326121840102625 0.0146986169928462 0.000827572656319032"
+        rpy="0 0 0" />
+      <mass
+        value="0.0046352964891205" />
+      <inertia
+        ixx="2.83059654329078E-07"
+        ixy="9.74021306913148E-09"
+        ixz="-1.84670556266564E-10"
+        iyy="1.04521523955054E-06"
+        iyz="1.00336243634775E-10"
+        izz="1.32368604227628E-06" />
+    </inertial> -->
+    <!-- <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/px4_onboard_imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find starling2_description)/meshes/px4_onboard_imu_link.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="px4_onboard_imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.0312500000000001 -0.0154999989600039 0.0199999999999959"
+      rpy="0 0 0" />
+    <parent
+      link="voxl_mount_link" />
+    <child
+      link="px4_onboard_imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <!-- General Gazebo config for rotor physics and control model -->
+  <gazebo>
+      <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="ignition::gazebo::systems::MulticopterMotorModel">
+        <robotNamespace>starling2</robotNamespace>
+        <jointName>fr_rotor_joint</jointName>
+        <linkName>fr_rotor_link</linkName>
+        <turningDirection>ccw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>0</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/1</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="ignition::gazebo::systems::MulticopterMotorModel">
+        <robotNamespace>starling2</robotNamespace>
+
+        <jointName>rl_rotor_joint</jointName>
+        <linkName>rl_rotor_link</linkName>
+        <turningDirection>ccw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>1</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/2</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="ignition::gazebo::systems::MulticopterMotorModel">
+        <robotNamespace>starling2</robotNamespace>
+
+        <jointName>fl_rotor_joint</jointName>
+        <linkName>fl_rotor_link</linkName>
+        <turningDirection>cw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>2</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/0</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+
+      <plugin
+        filename="ignition-gazebo-multicopter-motor-model-system"
+        name="ignition::gazebo::systems::MulticopterMotorModel">
+        <robotNamespace>starling2</robotNamespace>
+
+        <jointName>rr_rotor_joint</jointName>
+        <linkName>rr_rotor_link</linkName>
+        <turningDirection>cw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>800.0</maxRotVelocity>
+        <motorConstant>8.54858e-06</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>gazebo/command/motor_speed</commandSubTopic>
+        <motorNumber>3</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <motorSpeedPubTopic>motor_speed/3</motorSpeedPubTopic>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+
+      <plugin
+        filename="gz-sim-multicopter-control-system"
+        name="gz::sim::systems::MulticopterVelocityControl">
+        <commandSubTopic>gazebo/command/twist</commandSubTopic>
+        <enableSubTopic>enable</enableSubTopic>
+        <commandSubTopic>cmd_vel</commandSubTopic>
+        <comLinkName>base_link</comLinkName>
+        <velocityGain>2.7 2.7 2.7</velocityGain>
+        <attitudeGain>2 3 0.15</attitudeGain>
+        <angularRateGain>0.4 0.52 0.18</angularRateGain>
+        <maximumLinearAcceleration>2 2 2</maximumLinearAcceleration>
+        <robotNamespace>starling2</robotNamespace>
+        
+
+        <rotorConfiguration>
+          <rotor>
+            <jointName>fr_rotor_joint</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>1</direction>
+          </rotor>
+          <rotor>
+            <jointName>rl_rotor_joint</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>1</direction>
+          </rotor>
+          <rotor>
+            <jointName>fl_rotor_joint</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>-1</direction>
+          </rotor>
+          <rotor>
+            <jointName>rr_rotor_joint</jointName>
+            <forceConstant>8.54858e-06</forceConstant>
+            <momentConstant>0.016</momentConstant>
+            <direction>-1</direction>
+          </rotor>
+        </rotorConfiguration>
+      </plugin>
+  </gazebo>
+
+
+  <gazebo reference="front_rgb_camera_link">
+    <sensor type="camera" name="front_rgb">
+      <update_rate>10.0</update_rate>
+      <always_on>true</always_on>
+      <ignition_frame_id>front_rgb_camera_link</ignition_frame_id>
+      <!-- <pose>0 -0.12 0 0 0 0</pose> -->
+      <topic>/front/rgb/image_raw</topic>
+      <camera_info_topic>/front/rgb/camera_info</camera_info_topic>
+      <horizontal_fov>1.631883</horizontal_fov>
+      <image>
+          <width>1024</width>
+          <height>1024</height>
+          <format>R8G8B8</format>
+      </image>
+      <clip>
+          <near>0.3</near>
+          <far>20</far>
+      </clip>
+    </sensor>
+  </gazebo>
+
+
+  <gazebo reference="front_tracking_camera_link">
+    <sensor type="camera" name="front_tracking">
+      <update_rate>10.0</update_rate>
+      <always_on>true</always_on>
+      <ignition_frame_id>front_tracking_camera_link</ignition_frame_id>
+      <!-- <pose>0 -0.12 0 0 0 0</pose> -->
+      <topic>/front/tracking/image_raw</topic>
+      <camera_info_topic>/front/tracking/camera_info</camera_info_topic>
+      <horizontal_fov>1.46608</horizontal_fov>
+      <image>
+          <width>1280</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+      </image>
+      <clip>
+          <near>0.3</near>
+          <far>20</far>
+      </clip>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="rear_rgb_camera_link">
+    <sensor type="camera" name="rear_rgb">
+      <update_rate>10.0</update_rate>
+      <always_on>true</always_on>
+      <ignition_frame_id>rear_rgb_camera_link</ignition_frame_id>
+      <pose>0 0 0 0 90 0</pose>
+      <topic>/rear/rgb/image_raw</topic>
+      <camera_info_topic>/rear/rgb/camera_info</camera_info_topic>
+      <horizontal_fov>1.631883</horizontal_fov>
+      <image>
+          <width>1024</width>
+          <height>1024</height>
+          <format>R8G8B8</format>
+      </image>
+      <clip>
+          <near>0.3</near>
+          <far>20</far>
+      </clip>
+    </sensor>
+  </gazebo>
+
+
+  <gazebo reference="rear_tracking_camera_link">
+    <sensor type="camera" name="rear_tracking">
+      <update_rate>10.0</update_rate>
+      <always_on>true</always_on>
+      <ignition_frame_id>rear_tracking_camera_link</ignition_frame_id>
+      <pose>0 0 0 0 90 0</pose>
+      <topic>/rear/tracking/image_raw</topic>
+      <camera_info_topic>/rear/tracking/camera_info</camera_info_topic>
+      <horizontal_fov>1.46608</horizontal_fov>
+      <image>
+          <width>1280</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+      </image>
+      <clip>
+          <near>0.3</near>
+          <far>20</far>
+      </clip>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="gps_link">
+    <sensor name="rear_gps" type="navsat">
+      <!-- ensure the sensor is active (required) -->
+      <always_on>true</always_on>
+      <update_rate>30</update_rate>
+      <frame_id>gps_link</frame_id>
+      <ignition_frame_id>gps_link</ignition_frame_id>
+      <gz_frame_id>gps_link</gz_frame_id>
+      <topic>/gps</topic>
+    </sensor>
+  </gazebo>
+
+  
+</robot>
