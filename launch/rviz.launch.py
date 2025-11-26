@@ -9,7 +9,7 @@ def generate_launch_description():
 
     launch_description = LaunchDescription()
 
-    starling2_urdf_file = PathJoinSubstitution(
+    x500_urdf_file = PathJoinSubstitution(
                                                 [
                                                     FindPackageShare('x500_description'),
                                                     "urdf",
@@ -21,7 +21,7 @@ def generate_launch_description():
         [
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
-            starling2_urdf_file,
+            x500_urdf_file,
         ]
     )
 

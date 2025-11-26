@@ -13,7 +13,7 @@
   </xacro:x500_base>
 
   <!-- Attach the depth camera to the front of the drone -->
-  <xacro:depth_camera name="front" parent="x500_base_link">
+  <xacro:depth_camera name="front" parent="base_link">
     <origin xyz=".12 .03 .0" rpy="0 0 0"/>
   </xacro:depth_camera>
 
