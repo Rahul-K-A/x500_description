@@ -11,5 +11,5 @@ This ROS2 Humble package contains a URDF description for the x500 drone. This de
 ## Launching Rviz
 To launch RViz, use `ros2 launch x500_description rviz.launch.py`
 
-## Notice
-Based off of original source code from [here](https://github.com/PX4/PX4-gazebo-models/). Check LISCENSE file for more details. All CAD models are properties of original creators.
+## Notices and disclosure.
+Based off of original source code from [here](https://github.com/PX4/PX4-gazebo-models/). Check LICENSE file for more details. All CAD models are properties of original creators. This repository contains code that was modified using Generative Artifical Intelligence and as such may contain errors/inaccuracies.
