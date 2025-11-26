@@ -12,31 +12,31 @@
       <visual>
         <origin xyz="0 0 .025" rpy="0 0 3.141592654"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/NXP-HGD-CF.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/NXP-HGD-CF.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="0.174 0.174 .032" rpy="0 0 -.45"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Base.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Base.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="-0.174 0.174 .032" rpy="0 0 -.45"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Base.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Base.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="0.174 -0.174 .032" rpy="0 0 -.45"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Base.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Base.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="-0.174 -0.174 .032" rpy="0 0 -.45"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Base.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Base.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <visual>
@@ -98,13 +98,13 @@
       <visual>
         <origin xyz="-0.022 -0.14638461538461536 -0.016" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/1345_prop_ccw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+          <mesh filename="package://x500_description/meshes/x500/1345_prop_ccw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="0 0 -.032" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Bell.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Bell.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <collision>
@@ -131,13 +131,13 @@
       <visual>
         <origin xyz="-0.022 -0.14638461538461536 -0.016" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/1345_prop_ccw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+          <mesh filename="package://x500_description/meshes/x500/1345_prop_ccw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="0 0 -.032" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Bell.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Bell.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <collision>
@@ -164,13 +164,13 @@
       <visual>
         <origin xyz="-0.022 -0.14638461538461536 -0.016" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/1345_prop_cw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+          <mesh filename="package://x500_description/meshes/x500/1345_prop_cw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="0 0 -.032" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Bell.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Bell.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <collision>
@@ -197,13 +197,13 @@
       <visual>
         <origin xyz="-0.022 -0.14638461538461536 -0.016" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/1345_prop_cw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
+          <mesh filename="package://x500_description/meshes/x500/1345_prop_cw.stl" scale="0.8461538461538461 0.8461538461538461 0.8461538461538461"/>
         </geometry>
       </visual>
       <visual>
         <origin xyz="0 0 -.032" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://starling2-description/meshes/5010Bell.dae" scale="1 1 1"/>
+          <mesh filename="package://x500_description/meshes/x500/5010Bell.dae" scale="1 1 1"/>
         </geometry>
       </visual>
       <collision>

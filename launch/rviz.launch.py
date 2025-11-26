@@ -11,13 +11,13 @@ def generate_launch_description():
 
     starling2_urdf_file = PathJoinSubstitution(
                                                 [
-                                                    FindPackageShare('starling2_description'),
+                                                    FindPackageShare('x500_description'),
                                                     "urdf",
-                                                    "starling2.urdf"
+                                                    "x500_depth.urdf.xacro"
                                                 ]
                                             )
 
-    starling2_description_content = Command(
+    x500_description_content = Command(
         [
             PathJoinSubstitution([FindExecutable(name="xacro")]),
             " ",
@@ -28,13 +28,13 @@ def generate_launch_description():
 
     rviz_config_file = PathJoinSubstitution(
                                                 [
-                                                    FindPackageShare('starling2_description'),
+                                                    FindPackageShare('x500_description'),
                                                     "rviz",
                                                     "conf.rviz"
                                                 ]
                                             )
 
-    robot_description = {"robot_description": parameter_descriptions.ParameterValue(starling2_description_content, value_type=str)}
+    robot_description = {"robot_description": parameter_descriptions.ParameterValue(x500_description_content, value_type=str)}
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
