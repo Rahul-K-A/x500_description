@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>starling2_description</name>
+  <name>x500_description</name>
   <version>0.0.0</version>
-  <description>URDF description for Starling 2 drone from ModalAI</description>
+  <description>URDF description for X500 drone from PX4 SITL</description>
   <maintainer email="karahul209@gmail.com">rahul</maintainer>
   <license>TODO: License declaration</license>
 

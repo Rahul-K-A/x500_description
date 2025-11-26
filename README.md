@@ -1,6 +1,6 @@
-# ModalAI Starling 2 Max description and simulation
+# Iris X500 description and simulation
 
-This ROS2 Humble package contains a URDF description for the ModalAI Starling2 Max drone. This description allows for visualization using Rviz2 and Gazebo.
+This ROS2 Humble package contains a URDF description for the x500 drone. This description allows for visualization using Rviz2 and Gazebo.
 
 ## Build instructions
 1. Clone into the `src` folder of your ROS2 workspace

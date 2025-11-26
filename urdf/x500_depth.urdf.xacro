@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="x500_with_depth_camera" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Include the x500 base macro -->
+  <xacro:include filename="$(find starling2-description)/urdf/x500.urdf.xacro"/>
+
+  <!-- Include the depth camera macro -->
+  <xacro:include filename="$(find starling2-description)/urdf/depth_camera.urdf.xacro"/>
+
+  <!-- Instantiate the x500 base -->
+  <xacro:x500_base name="x500">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:x500_base>
+
+  <!-- Attach the depth camera to the front of the drone -->
+  <xacro:depth_camera name="front" parent="x500_base_link">
+    <origin xyz="0.1 0 0.05" rpy="0 0 0"/>
+  </xacro:depth_camera>
+
+</robot>
