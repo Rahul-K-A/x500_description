@@ -115,6 +115,15 @@
       </collision>
     </link>
 
+    <link name="odom_link">
+    </link>
+
+    <joint name="odom_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="odom_link"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
     <joint name="rotor_0_joint" type="continuous">
       <parent link="base_link"/>
       <child link="rotor_0"/>

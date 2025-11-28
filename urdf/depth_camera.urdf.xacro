@@ -29,6 +29,22 @@
       <xacro:insert_block name="origin"/>
     </joint>
 
+    <link name="rgb_link"/>
+    <link name="depth_link"/>
+
+    <joint name="rgb_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="rgb_link"/>
+      <origin xyz="0.01233 -0.03 .01878 " rpy="0 0 0"/>
+    </joint>
+
+    <joint name="depth_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="depth_link"/>
+      <origin xyz="0.01233 -0.03 .01878 " rpy="0 0 0"/>
+    </joint>
+      
+
     <gazebo reference="camera_link">
       <sensor name="IMX214" type="camera">
         <pose>0.01233 -0.03 .01878 0 0 0</pose>
