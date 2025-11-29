@@ -20,28 +20,6 @@ def generate_launch_description():
                         ])
                     )
 
-    # ROS-GZ bridges
-    parameter_bridge = Node(
-        package='ros_gz_bridge',
-        executable='parameter_bridge',
-        arguments=['/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo'],
-        output='screen'
-    )
-
-    image_bridge_camera = Node(
-        package='ros_gz_image',
-        executable='image_bridge',
-        arguments=['/camera'],
-        output='screen'
-    )
-
-    image_bridge_depth = Node(
-        package='ros_gz_image',
-        executable='image_bridge',
-        arguments=['/depth_camera'],
-        output='screen'
-    )
-
 
     start_gz_ros_bridge = Node(
                                 package='ros_gz_bridge',
@@ -68,7 +46,8 @@ def generate_launch_description():
                                                         ])
                                                     ]), 
         launch_arguments={
-            'rtabmap_args': '--delete_db_on_start',
+            'localization' : 'true',
+            'initial_pose' : '0 0 0 0 0 0',
             'rgbd': 'true',
             'rgb_topic': '/world/default/model/x500_depth_0/link/camera_link/sensor/IMX214/image',
             'depth_topic': '/depth_camera',
