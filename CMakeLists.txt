@@ -26,6 +26,8 @@ install( DIRECTORY meshes DESTINATION share/${PROJECT_NAME} )
 install( DIRECTORY launch DESTINATION share/${PROJECT_NAME} )
 install( DIRECTORY rviz DESTINATION share/${PROJECT_NAME} )
 install( DIRECTORY worlds DESTINATION share/${PROJECT_NAME} )
+install( DIRECTORY rtab_map_files DESTINATION share/${PROJECT_NAME} )
+
 
 
 

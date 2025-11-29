@@ -37,6 +37,9 @@ def generate_launch_description():
                                            ]
                             )
 
+
+    db_file_path = PathJoinSubstitution([FindPackageShare('x500_description'), "rtab_map_files", "rtabmap.db"])
+
     # Include RTAB-MAP launch
     rtabmap_include = IncludeLaunchDescription( PythonLaunchDescriptionSource([
                                                         PathJoinSubstitution([
@@ -53,9 +56,11 @@ def generate_launch_description():
             'depth_topic': '/depth_camera',
             'camera_info_topic': '/world/default/model/x500_depth_0/link/camera_link/sensor/IMX214/camera_info',
             'frame_id': 'base_link',
-            'use_sim_time': 'true'
+            'use_sim_time': 'true',
+            'database_path' : db_file_path
         }.items()
     )
+
 
     return LaunchDescription([
         #px4_process,
