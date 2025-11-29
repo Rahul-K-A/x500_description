@@ -14,7 +14,7 @@
 
   <!-- Attach the depth camera to the front of the drone -->
   <xacro:depth_camera name="front" parent="base_link">
-    <origin xyz=".12 .03 .0" rpy="0 0 0"/>
+    <origin xyz=".12 .03 .0" rpy="-1.5708 0.0 -1.5708"/>
   </xacro:depth_camera>
 
 </robot>
