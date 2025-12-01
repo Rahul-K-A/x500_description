@@ -5,18 +5,6 @@
     <self_collide>false</self_collide>
     <static>false</static>
     <link name="camera_link">
-      <inertial>
-        <pose>0.00358 -0.03 .014 0 0 0</pose>
-        <mass>0.061</mass>
-        <inertia>
-          <ixx>0.0000460804</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.0000055421</iyy>
-          <iyz>0</iyz>
-          <izz>0.0000436519</izz>
-        </inertia>
-      </inertial>
       <visual name="OakD-Lite/visual">
         <pose>0 0 0 0 0 0</pose>
         <geometry>
