@@ -60,7 +60,7 @@
       <collision>
         <origin xyz="0 0 .007" rpy="0 0 0"/>
         <geometry>
-          <box size="0.35355339059327373 0.35355339059327373 0.05"/>
+          <box size="1.0 1.0 1.0"/>
         </geometry>
       </collision>
       <collision>
